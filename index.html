@@ -14,6 +14,7 @@
     <style>
         html {
             scroll-behavior: smooth;
+            margin-top: -16px;
         }
         
         .w3-lato {
@@ -119,42 +120,51 @@
         .ca-button {
             cursor: pointer;
         }
+        
+        
+        @media only screen and (max-width: 600px) {
+            #work > * {
+              margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 
-<body id="myPage" class="w3-lato w3-container w3-margin">
+<body id="myPage" class="w3-lato w3-margin">
+  <div >
     <!-- Sidebar on click -->
-    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-round w3-animate-left w3-xxlarge" style=" display: none; z-index: 2" id="mySidebar">
-        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-red">Close
+    <nav title="Main" class="w3-mobile w3-sidebar w3-bar-block w3-white w3-card w3-round w3-animate-left w3-xxlarge" style=" display: none; z-index: 2" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-mobile w3-button w3-display-topright w3-text-red">Close
         <i class="fa fa-remove"></i>
       </a>
     </nav>
 
     <!-- Navbar -->
-    <div class="w3-top">
-        <div class="w3-bar w3-black w3-left-align">
+    <div>
+        <div id="myNav" class="w3-bar w3-mobile w3-black">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-red w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i
         ></a>
-            <a href="#" class="w3-bar-item w3-button w3-black w3-hover-gold"><i class="fa fa-home w3-margin-right"></i>Home</a
+            <a href="#" class="w3-bar-item w3-mobile w3-hide-small w3-button w3-black w3-hover-gold"><i class="fa fa-home w3-margin-right"></i>Home</a
         >
         <a
           href="#team"
-          class="w3-bar-item w3-button w3-hide-small w3-hover-vivid-red"
+          class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-vivid-red"
           >Team</a
         >
         <a
           href="#work"
-          class="w3-bar-item w3-button w3-hide-small w3-hover-vivid-red"
+          class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-vivid-red"
           >Work</a
         >
         <a
           href="#pricing"
-          class="w3-bar-item w3-button w3-hide-small w3-hover-vivid-red"
+          class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-vivid-red"
           >Price</a
         >
         <a
           href="#contact"
-          class="w3-bar-item w3-button w3-hide-small w3-hover-vivid-red"
+          class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-vivid-red"
           >Contact</a
         >
       </div>
@@ -162,21 +172,24 @@
       <!-- Navbar on small screens -->
       <div
         id="navDemo"
-        class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium"
+        class="w3-bar w3-margin-right w3-black w3-hide w3-hide-large w3-hide-medium mini-nav"
       >
-        <a href="#team" class="w3-hover-vivid-red w3-bar-item w3-button"
+      <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-gold"><i class="fa fa-home w3-margin-right"></i>Home</a
+        >
+        <a href="#team" class="w3-hover-vivid-red w3-bar-item w3-mobile w3-button"
           >Team</a
         >
-        <a href="#work" class="w3-hover-vivid-red w3-bar-item w3-button"
+        <a href="#work" class="w3-hover-vivid-red w3-bar-item w3-button w3-mobile "
           >Work</a
         >
-        <a href="#pricing" class="w3-hover-vivid-red w3-bar-item w3-button"
+        <a href="#pricing" class="w3-hover-vivid-red w3-bar-item w3-button w3-mobile "
           >Pricing</a
         >
-        <a href="#contact" class="w3-hover-vivid-red w3-bar-item w3-button"
+        <a href="#contact" class="w3-hover-vivid-red w3-bar-item w3-button w3-mobile "
           >Contact</a
         >
       </div>
+      
     </div>
 
     <!-- Image Header -->
@@ -321,7 +334,7 @@
     </div>
 
     <!-- Work Row -->
-    <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+    <div class="w3-row-padding w3-padding-64 w3-mobile w3-theme-l1" id="work">
         <div class="w3-quarter">
             <h2>Our Work</h2>
             <p>
@@ -515,18 +528,7 @@
     </footer>
 
     <script>
-        // Script for side navigation
-        function w3_open() {
-            var x = document.getElementById("mySidebar");
-            x.style.width = "300px";
-            x.style.paddingTop = "10%";
-            x.style.display = "block";
-        }
-
-        // Close side navigation
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
+        
 
         // Used to toggle the menu on smaller screens when clicking on the menu button
         function openNav() {
@@ -538,6 +540,7 @@
             }
         }
     </script>
+    </div>
 </body>
 
 </html>
