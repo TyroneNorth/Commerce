@@ -119,12 +119,18 @@
         .ca-button {
             cursor: pointer;
         }
+        #myNav {
+          width: 96.25%
+        }
+        .miniNav {
+          width: 96.25%
+        }
     </style>
 </head>
 
-<body id="myPage" class="w3-lato w3-container w3-margin">
+<body id="myPage" class=" w3-mobile w3-lato w3-container w3-margin">
     <!-- Sidebar on click -->
-    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-round w3-animate-left w3-xxlarge" style=" display: none; z-index: 2" id="mySidebar">
+    <nav class="w3-mobile w3-sidebar w3-bar-block w3-white w3-card w3-round w3-animate-left w3-xxlarge" style=" display: none; z-index: 2" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-red">Close
         <i class="fa fa-remove"></i>
       </a>
@@ -132,7 +138,7 @@
 
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-black w3-left-align">
+        <div id="myNav" class="w3-bar w3-black w3-mobile">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-red w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i
         ></a>
             <a href="#" class="w3-bar-item w3-button w3-black w3-hover-gold"><i class="fa fa-home w3-margin-right"></i>Home</a
@@ -162,7 +168,7 @@
       <!-- Navbar on small screens -->
       <div
         id="navDemo"
-        class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium"
+        class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-mobile mini-nav"
       >
         <a href="#team" class="w3-hover-vivid-red w3-bar-item w3-button"
           >Team</a
